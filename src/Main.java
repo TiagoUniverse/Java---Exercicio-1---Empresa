@@ -30,8 +30,10 @@ public class Main {
         Departamento tecnologia = new Departamento("tecnologia");
 
         Funcionario tiago = new Funcionario("tecnologia", "tiago", 1200, "05-10-2023");
+        Funcionario Diego = new Funcionario("tecnologia", "Diego", 1200, "05-10-2023");
+
 
         System.out.println(tiago.getNome());
-
+        System.out.println(Diego.getNome());
     }
 }
