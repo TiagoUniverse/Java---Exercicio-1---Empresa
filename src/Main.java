@@ -6,26 +6,33 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Departamento design = new Departamento("design");
-        Departamento tecnologia = new Departamento("tecnologia");
-
-        ArrayList<Funcionario> listaFuncionarios = new ArrayList<>();
 
 
-
-        Funcionario tiago = new Funcionario("tecnologia", "tiago", 1200, "05-10-2023");
-        Funcionario Diego = new Funcionario("tecnologia", "Diego", 1200, "05-10-2023");
-
-        // Adicionando elementos à lista
-        listaFuncionarios.add(tiago);
-        listaFuncionarios.add(Diego);
-
-        for (Funcionario funcionario : listaFuncionarios) {
-            System.out.println(funcionario);
-        }
+        Empresa minhaEmpresa = new Empresa("Informatica POO","987654321" );
 
 
-//        System.out.println(tiago.getNome());
-//        System.out.println(Diego.getNome());
+        Departamento meuDepartamento = new Departamento("Departamento Programação", "987654321", "RH");
+
+
+        Funcionario joao = new Funcionario("Informatica POO", "987654321", 5000.0, "01/01/2022", "Joao", "Financeiro");
+        Funcionario maria = new Funcionario("Informatica POO", "987654321", 6000.0, "01/01/2022", "Maria", "Marketing");
+        Funcionario carlos = new Funcionario("Informatica POO", "987654321", 7000.0, "01/01/2022", "carlos", "");
+
+
+        meuDepartamento.adicionarFuncionario(joao);
+        meuDepartamento.adicionarFuncionario(maria);
+        meuDepartamento.adicionarFuncionario(carlos);
+
+
+        System.out.println("Antes do aumento:");
+        System.out.println(meuDepartamento);
+
+
+        meuDepartamento.concederAumento(10.0);
+
+
+        System.out.println("Depois do aumento:");
+        System.out.println(meuDepartamento);
     }
 }
+

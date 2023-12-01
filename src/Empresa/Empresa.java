@@ -1,21 +1,22 @@
 package Empresa;
 
-public class Empresa {
+class Empresa {
+    protected String nomeEmpresa;
+    protected String cnpj;
 
-    protected String nome;
 
-    protected int cnpj;
-
-    public Empresa() {
-        this.nome = "SamSam Tech";
-        this.cnpj = 1234;
+    public Empresa(String nomeEmpresa, String cnpj) {
+        this.nomeEmpresa = nomeEmpresa;
+        this.cnpj = cnpj;
     }
 
-    public String getNome() {
-        return nome;
-    }
 
-    public int getCnpj() {
-        return cnpj;
+    @Override
+    public String toString() {
+        return "Empresa{" +
+                "nome='" + nomeEmpresa + '\'' +
+                ", cnpj='" + cnpj + '\'' +
+                '}';
     }
 }
+

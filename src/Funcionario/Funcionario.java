@@ -2,49 +2,35 @@ package Funcionario;
 
 import Departamento.Departamento;
 
-public class Funcionario extends Departamento {
+class Funcionario extends Departamento {
+    private double salario;
+    private String nomeFuncionario;
+    private String dataAdmissao;
 
-    protected String nome;
 
-    protected  double salario;
-
-    protected  String data_admissao;
-
-    public Funcionario(String nome_departamento, String nome_funcionario, double salario, String data_admissao) {
-        super(nome_departamento);
-        this.nome = nome_funcionario;
+    public Funcionario(String nomeEmpresa, String cnpj, double salario,
+                       String dataAdmissao, String nomeFuncionario,
+                       String nomeDepartamento) {
+        super(nomeEmpresa, cnpj, nomeDepartamento);
         this.salario = salario;
-        this.data_admissao = data_admissao;
+        this.nomeFuncionario = nomeFuncionario;
+        this.dataAdmissao = dataAdmissao;
     }
 
-    //    @Override
-//    public String toString() {
-//        return "Funcionario{" +
-//                "nome='" + nome + '\'' +
-//                ", salario=" + salario +
-//                '}';
-//    }
+
+    public void concederAumento(double percentualAumento) {
+        double novoSalario = this.salario * (1 + percentualAumento / 100);
+        this.salario = novoSalario;
+    }
 
 
     @Override
     public String toString() {
         return "Funcionario{" +
-                "nome='" + nome + '\'' +
+                "nome='" + nomeFuncionario + '\'' +
+                ", cnpj='" + cnpj + '\'' +
                 ", salario=" + salario +
-                ", data_admissao='" + data_admissao + '\'' +
+                ", dataAdmissao='" + dataAdmissao + '\'' +
                 '}';
-    }
-
-    @Override
-    public String getNome() {
-        return nome;
-    }
-
-    public double getSalario() {
-        return salario;
-    }
-
-    public String getData_admissao() {
-        return data_admissao;
     }
 }

@@ -1,17 +1,45 @@
 package Departamento;
 
 import Empresa.Empresa;
+import Funcionario.Funcionario;
 
-public class Departamento extends Empresa {
+Departamentoimport java.util.ArrayList;
+//import java.util.List;
+//
 
-    protected String nome;
+// Classe Departamento que herda de Empresa
+class Departamento extends Empresa {
 
-    public Departamento(String nome) {
-        super();
-        this.nome = nome;
+
+    private String nomeDepartamento;
+    private List<Funcionario> funcionarios;
+
+
+    public Departamento(String nomeEmpresa, String cnpj, String nomeDepartamento) {
+        super(nomeEmpresa, cnpj);
+        this.nomeDepartamento = nomeDepartamento;
+        this.funcionarios = new ArrayList<>();
     }
 
-    public String getNome() {
-        return nome;
+
+    public void adicionarFuncionario(Funcionario funcionario) {
+        funcionarios.add(funcionario);
+    }
+
+
+    public void concederAumento(double percentualAumento) {
+        for (Funcionario funcionario : funcionarios) {
+            funcionario.concederAumento(percentualAumento);
+        }
+    }
+
+
+    @Override
+    public String toString() {
+        return "Departamento{" +
+                "nome='" + nomeDepartamento + '\'' +
+                ", cnpj='" + cnpj + '\'' +
+                ", funcionarios=" + funcionarios +
+                '}';
     }
 }
