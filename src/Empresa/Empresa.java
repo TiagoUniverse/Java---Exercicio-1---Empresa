@@ -6,8 +6,16 @@ public class Empresa {
 
     protected int cnpj;
 
-    public Empresa(String nome_empresa, int cnpj) {
-        this.nome = nome_empresa;
-        this.cnpj = cnpj;
+    public Empresa() {
+        this.nome = "SamSam Tech";
+        this.cnpj = 1234;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getCnpj() {
+        return cnpj;
     }
 }
