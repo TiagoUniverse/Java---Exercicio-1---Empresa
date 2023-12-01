@@ -6,11 +6,12 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        Departamento design = new Departamento("design");
+        Departamento tecnologia = new Departamento("tecnologia");
 
         ArrayList<Funcionario> listaFuncionarios = new ArrayList<>();
 
-        Departamento design = new Departamento("design");
-        Departamento tecnologia = new Departamento("tecnologia");
+
 
         Funcionario tiago = new Funcionario("tecnologia", "tiago", 1200, "05-10-2023");
         Funcionario Diego = new Funcionario("tecnologia", "Diego", 1200, "05-10-2023");
@@ -22,7 +23,7 @@ public class Main {
         for (Funcionario funcionario : listaFuncionarios) {
             System.out.println(funcionario);
         }
-        
+
 
 //        System.out.println(tiago.getNome());
 //        System.out.println(Diego.getNome());
