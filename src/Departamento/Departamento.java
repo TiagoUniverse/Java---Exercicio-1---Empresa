@@ -7,6 +7,7 @@ public class Departamento extends Empresa {
     protected String nome;
 
     public Departamento(String nome) {
+        super();
         this.nome = nome;
     }
 

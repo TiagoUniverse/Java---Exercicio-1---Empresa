@@ -1,4 +1,6 @@
 import Departamento.Departamento;
+import Empresa.Empresa;
+import Funcionario.Funcionario;
 
 
 public class Main {
@@ -24,12 +26,12 @@ public class Main {
 //            System.out.println(listaFuncionarios.get(i));
 //        }
 
-
         Departamento design = new Departamento("design");
         Departamento tecnologia = new Departamento("tecnologia");
 
-        System.out.println(design.getNome());
-        System.out.println(tecnologia.getNome());
+        Funcionario tiago = new Funcionario("tecnologia", "tiago", 1200, "05-10-2023");
+
+        System.out.println(tiago.getNome());
 
     }
 }
