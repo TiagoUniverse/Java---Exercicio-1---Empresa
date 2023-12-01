@@ -27,6 +27,15 @@ public class Funcionario extends Departamento {
 
 
     @Override
+    public String toString() {
+        return "Funcionario{" +
+                "nome='" + nome + '\'' +
+                ", salario=" + salario +
+                ", data_admissao='" + data_admissao + '\'' +
+                '}';
+    }
+
+    @Override
     public String getNome() {
         return nome;
     }
