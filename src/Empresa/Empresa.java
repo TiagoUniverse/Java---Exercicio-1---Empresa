@@ -1,9 +1,8 @@
 package Empresa;
 
-class Empresa {
+public class Empresa {
     protected String nomeEmpresa;
     protected String cnpj;
-
 
     public Empresa(String nomeEmpresa, String cnpj) {
         this.nomeEmpresa = nomeEmpresa;
@@ -14,9 +13,10 @@ class Empresa {
     @Override
     public String toString() {
         return "Empresa{" +
-                "nome='" + nomeEmpresa + '\'' +
+                "nomeEmpresa='" + nomeEmpresa + '\'' +
                 ", cnpj='" + cnpj + '\'' +
                 '}';
     }
+
 }
 

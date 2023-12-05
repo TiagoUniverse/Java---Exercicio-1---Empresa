@@ -1,38 +1,28 @@
-import Departamento.Departamento;
-import Empresa.Empresa;
-import Funcionario.Funcionario;
 
+import Empresa.*;
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
 
+        Empresa minhaEmpresa = new Empresa("SamSam Tech", "1234");
 
-        Empresa minhaEmpresa = new Empresa("Informatica POO","987654321" );
+        Departamento tecnologia = new Departamento("SamSam Tech","1234", "Tecnologia");
 
+        Funcionario tiago = new Funcionario("SamSam Tech", "1234", "Tecnologia",1700,"Tiago" , "05-10-2023");
+        Funcionario joao = new Funcionario("SamSam Tech", "1234", "Tecnologia",1700,"João" , "08-10-2023");
 
-        Departamento meuDepartamento = new Departamento("Departamento Programação", "987654321", "RH");
-
-
-        Funcionario joao = new Funcionario("Informatica POO", "987654321", 5000.0, "01/01/2022", "Joao", "Financeiro");
-        Funcionario maria = new Funcionario("Informatica POO", "987654321", 6000.0, "01/01/2022", "Maria", "Marketing");
-        Funcionario carlos = new Funcionario("Informatica POO", "987654321", 7000.0, "01/01/2022", "carlos", "");
-
-
-        meuDepartamento.adicionarFuncionario(joao);
-        meuDepartamento.adicionarFuncionario(maria);
-        meuDepartamento.adicionarFuncionario(carlos);
-
+        tecnologia.adicionarFuncionario(tiago);
+        tecnologia.adicionarFuncionario(joao);
 
         System.out.println("Antes do aumento:");
-        System.out.println(meuDepartamento);
+        System.out.println(tecnologia);
 
+        tecnologia.concederAumento(30.0);
 
-        meuDepartamento.concederAumento(10.0);
+        System.out.println("Antes do aumento:");
+        System.out.println(tecnologia);
 
-
-        System.out.println("Depois do aumento:");
-        System.out.println(meuDepartamento);
     }
 }
 

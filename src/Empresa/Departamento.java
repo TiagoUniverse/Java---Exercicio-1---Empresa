@@ -1,19 +1,12 @@
-package Departamento;
+package Empresa;
+import java.util.ArrayList;
+import java.util.List;
 
-import Empresa.Empresa;
-import Funcionario.Funcionario;
-
-Departamentoimport java.util.ArrayList;
-//import java.util.List;
-//
-
-// Classe Departamento que herda de Empresa
-class Departamento extends Empresa {
-
+public class Departamento extends Empresa {
 
     private String nomeDepartamento;
-    private List<Funcionario> funcionarios;
 
+    private List<Funcionario> funcionarios;
 
     public Departamento(String nomeEmpresa, String cnpj, String nomeDepartamento) {
         super(nomeEmpresa, cnpj);
@@ -21,18 +14,15 @@ class Departamento extends Empresa {
         this.funcionarios = new ArrayList<>();
     }
 
-
-    public void adicionarFuncionario(Funcionario funcionario) {
+    public void adicionarFuncionario (Funcionario funcionario){
         funcionarios.add(funcionario);
     }
 
-
-    public void concederAumento(double percentualAumento) {
-        for (Funcionario funcionario : funcionarios) {
+    public void concederAumento(double percentualAumento){
+        for (Funcionario funcionario : funcionarios){
             funcionario.concederAumento(percentualAumento);
         }
     }
-
 
     @Override
     public String toString() {
